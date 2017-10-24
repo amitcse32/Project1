@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <noname.project1.utils.controls.TextViewMedium
+        android:layout_width="match_parent"
+        android:id="@+id/textViewMessage"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_corner_grey_toast"
+        android:gravity="center"
+        android:padding="30dp"
+        android:text="Sample Text"
+        android:textColor="#ffffff"
+        android:textSize="17dp" />
+</LinearLayout>
