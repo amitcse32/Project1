@@ -15,4 +15,8 @@
     <string name="enter_confirm_password">Please Enter Confirm Password.</string>
     <string name="enter_valid_email">Please enter valid email.</string>
     <string name="loading">Loading....</string>
+    <string name="title_activity_welcome">WelcomeActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>

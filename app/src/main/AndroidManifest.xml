@@ -25,7 +25,7 @@
         <activity
             android:name=".view.activity.signup.SignUpActivity"
             android:label="@string/student_signup"
-            android:windowSoftInputMode="stateHidden"></activity>
+            android:windowSoftInputMode="stateHidden" />
 
         <service android:name=".utils.notifications.MyFirebaseInstanceIDService">
             <intent-filter>
@@ -38,7 +38,13 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".view.activity.signin.LoginActivity" android:theme="@style/AppThemeNoActionBar"></activity>
+        <activity
+            android:name=".view.activity.signin.LoginActivity"
+            android:theme="@style/AppThemeNoActionBar" />
+        <activity
+            android:name=".view.activity.welcome.WelcomeActivity"
+            android:label="@string/title_activity_welcome"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

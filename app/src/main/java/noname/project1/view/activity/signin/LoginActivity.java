@@ -1,5 +1,6 @@
 package noname.project1.view.activity.signin;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -13,6 +14,8 @@ import noname.project1.utils.controls.EditTextMedium;
 import noname.project1.view.activity.base.BaseActivity;
 import noname.project1.view.activity.signin.presenter.LoginPresenter;
 import noname.project1.view.activity.signin.view.LoginView;
+import noname.project1.view.activity.signup.SignUpActivity;
+import noname.project1.view.activity.welcome.WelcomeActivity;
 
 public class LoginActivity extends BaseActivity implements LoginView {
 
@@ -40,6 +43,12 @@ public class LoginActivity extends BaseActivity implements LoginView {
     }
 
 
+    @OnClick(R.id.textView)
+    public void onRegisterButtonClick() {
+       startActivity(new Intent(this, SignUpActivity.class));
+    }
+
+
     @Override
     public void showToastMessage(String message) {
         showToast_base(this, message, false);
@@ -48,6 +57,8 @@ public class LoginActivity extends BaseActivity implements LoginView {
     @Override
     public void onLoginSuccess(LoginResponse loginResponse) {
         buttonLogin.setBackgroundResource(R.drawable.button_universal_success);
+        startActivity(new Intent(this, WelcomeActivity.class));
+        finish();
     }
 
     @Override
