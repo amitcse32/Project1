@@ -19,4 +19,24 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+    <string-array name="leftMenuTitle">
+        <item>Home</item>
+        <item>Profile</item>
+        <item>New Posts</item>
+        <item>UpComing Events</item>
+        <item>Settings</item>
+        <item>Logout</item>
+    </string-array>
+    <integer-array  name="leftMenuIcon">
+        <item>@drawable/ic_launcher</item>
+        <item>@drawable/ic_launcher</item>
+        <item>@drawable/ic_launcher</item>
+        <item>@drawable/ic_launcher</item>
+        <item>@drawable/ic_launcher</item>
+        <item>@drawable/ic_launcher</item>
+    </integer-array>
+
+
 </resources>
