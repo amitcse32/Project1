@@ -6,11 +6,13 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import noname.project1.R;
+import noname.project1.utils.AppPrefrence;
 import noname.project1.view.activity.base.BaseActivity;
 import noname.project1.view.activity.signin.LoginActivity;
 import noname.project1.view.activity.signup.SignUpActivity;
 import noname.project1.view.activity.splash.presenter.SplashPresenter;
 import noname.project1.view.activity.splash.view.SplashView;
+import noname.project1.view.activity.welcome.WelcomeActivity;
 
 public class SplashActivity extends BaseActivity implements SplashView {
 
@@ -42,8 +44,15 @@ public class SplashActivity extends BaseActivity implements SplashView {
 
     @Override
     public void onSplashComplete() {
-        startActivity(new Intent(this, LoginActivity.class));
-        finish();
+
+        String value = AppPrefrence.getString(AppPrefrence.USER_ID, this);
+        if (value.length() > 0) {
+            startActivity(new Intent(this, WelcomeActivity.class));
+            finish();
+        } else {
+            startActivity(new Intent(this, LoginActivity.class));
+            finish();
+        }
     }
 
     @Override

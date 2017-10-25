@@ -41,6 +41,7 @@ public class LoginPresenter implements LoginHandler {
         loginView.endProgressBar();
         if (response != null) {
             if (response.getResult().getStatus().equals("1")) {
+
                 loginView.onLoginSuccess(response);
             } else {
                 loginView.showToastMessage("Wrong username or password!");

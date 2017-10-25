@@ -1,6 +1,7 @@
 package noname.project1.view.activity.signin;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
@@ -9,6 +10,7 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 import noname.project1.R;
 import noname.project1.model.props.loginuser.LoginResponse;
+import noname.project1.utils.AppPrefrence;
 import noname.project1.utils.controls.ButtonMedium;
 import noname.project1.utils.controls.EditTextMedium;
 import noname.project1.view.activity.base.BaseActivity;
@@ -45,7 +47,7 @@ public class LoginActivity extends BaseActivity implements LoginView {
 
     @OnClick(R.id.textView)
     public void onRegisterButtonClick() {
-       startActivity(new Intent(this, SignUpActivity.class));
+        startActivity(new Intent(this, SignUpActivity.class));
     }
 
 
@@ -57,6 +59,9 @@ public class LoginActivity extends BaseActivity implements LoginView {
     @Override
     public void onLoginSuccess(LoginResponse loginResponse) {
         buttonLogin.setBackgroundResource(R.drawable.button_universal_success);
+
+        //Shared
+        AppPrefrence.setString(AppPrefrence.USER_ID, loginResponse.getResult().getId(), this);
         startActivity(new Intent(this, WelcomeActivity.class));
         finish();
     }
